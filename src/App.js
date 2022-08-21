@@ -1,26 +1,27 @@
-
 import './App.css';
+import NavBar from './componentes/navBar';
+import cartWidget from './componentes/cartWidget';
+import itemListContainer from './componentes/itemListContainer';
 
 
 
-const App =() => {
+const App = () => {
   return (
-    <header className="navBar">
-      <h2>Buy Smart</h2>
-      <nav>
-        <ul>
-          <li>Home</li>
-          <li>Products</li>
-          <li>Prices</li>
-          <li>Contact</li>
-          </ul>
-      </nav>
-      <div className="btn">
-        <button>Login</button>
-        </div>
-          
-      </header>
-  );
+    <>
+    <NavBar/>
+    <cartWidget/>
+    <itemListContainer/>
+        </>
+    );
 }
+
+cartWidget();
+itemListContainer();
+
 export default App;
+
+
+
+
+
 
