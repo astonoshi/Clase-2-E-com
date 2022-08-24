@@ -1,24 +1,21 @@
 import './App.css';
-import NavBar from './componentes/navBar';
-import cartWidget from './componentes/cartWidget';
-import itemListContainer from './componentes/itemListContainer';
-
-
+import NavBar from './componentes/NavBar';
+import Container from './componentes/ItemListContainer';
 
 const App = () => {
   return (
     <>
     <NavBar/>
-    <cartWidget/>
-    <itemListContainer/>
+    <Container greeting  = " Welcome" texto = "to our shop online"/>
         </>
     );
 }
-
-cartWidget();
-itemListContainer();
-
 export default App;
+
+
+
+
+
 
 
 

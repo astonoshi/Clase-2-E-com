@@ -1,9 +1,17 @@
-const greeting = (props) => {
+const Container = (props) => {
     return (
-        <div>
-            <h5>{props.title}</h5>
-            <p>{props.subtitle}</p>
+        <div className="container">
+            <h5> {props.greeting}</h5>
+            <p> {props.texto}</p>
         </div>
     );
 }
-export default greeting;
+
+
+export default Container;
+
+
+
+
+
+

@@ -1,16 +1,21 @@
 
-const cartWidget = () => {
-    return (
-        <>
-        <div className="icon">
-            <ion-icon name="cart-outline"></ion-icon> 
-        </div>
-        <div className="quantity">4</div>
-        </>
-        
-        );
-}
+import {BsCartFill} from 'react-icons/bs';
 
 
+const CartWidget = () => {
+	return (
+		<>
+		<div className="shoppingCart">
+			<BsCartFill /> 
+			<span>  6  </span>
+			
+		</div>
+		</>
+			
 
-export default cartWidget;
+		
+		
+	);
+};
+
+export default CartWidget;
