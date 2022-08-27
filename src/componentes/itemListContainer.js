@@ -1,17 +1,23 @@
-const Container = (props) => {
+
+
+
+const ItemListContainer = (props) => {
+   
+    
+
+
     return (
         <div className="container">
             <h5> {props.greeting}</h5>
             <p> {props.texto}</p>
-        </div>
+            
+            
+            
+        </div> 
     );
 }
 
 
-export default Container;
 
 
-
-
-
-
+export default ItemListContainer;
