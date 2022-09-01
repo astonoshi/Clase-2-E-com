@@ -1,8 +1,10 @@
-import { FaMinus, FaPlus } from "react-icons/fa";
-import { useEffect, useState } from "react";
+import {useState} from "react";
 import Swal from 'sweetalert2';
+import { FaMinus, FaPlus } from "react-icons/fa";
+import React, { useEffect} from 'react';
 
-const ItemCount = ({ stock = 0, initial = 0 }) => {
+
+export default function ItemCount ({ stock = 0, initial = 0 }) {
   const [counter, setCounter] = useState(0);
   const addProduct = () => {
     Swal.fire("You have added one product", "success");
@@ -23,12 +25,13 @@ const ItemCount = ({ stock = 0, initial = 0 }) => {
     }
   };
   return (
+    <div className="itemCount">
     <div className="addCartContainer">
       <button className="addingBtn" onClick={increment}>
         <FaPlus />
       </button>
       < h4>{counter}</h4>
-      <button className="addingBtn" onClick={decrease}>
+      <button className="decreaseBtn" onClick={decrease}>
         <FaMinus />
       </button>
       <button
@@ -38,7 +41,8 @@ const ItemCount = ({ stock = 0, initial = 0 }) => {
         Add to cart
       </button>
     </div>
+  </div>
   );
 };
 
-export default ItemCount;
+
