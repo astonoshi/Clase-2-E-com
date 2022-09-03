@@ -1,23 +1,31 @@
-import React, {useState, useEffect} from "react";
-import promise from "../utils/promise";
-import {data} from "../utils/data";
-import ItemList from "./Item.List";
+import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container";
+import ItemList from "./ItemList"
+import CustomFetch from "../utils/CustomFetch";
+import { data } from "../utils/data"
+import { useEffect, useState } from "react";
+
+const ItemListContainer = () => {
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        CustomFetch(data)
+            .then(res => setProducts(res))
+            .catch(err => console.log(err))
+    }, []);
 
 
-export default function ItemListContainer(props) {
+    return (
+        <div className="ItemListContainer">
+            <Container>
+                <Row>
 
-  const [products, setProducts] = useState([]);
+                    <ItemList items={products} />
 
-  useEffect(() => {
-    promise(data)
-      .then(result => setProducts(result))
-      .catch(err => console.log(err))
-  })
+                </Row>
+            </Container>
+        </div>
+    );
+};
 
-  return (
-    <>
-      <h1 >{props.greetings}</h1>
-      <ItemList items={products} />
-      </>
-  );
-}
+export default ItemListContainer;

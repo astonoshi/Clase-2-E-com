@@ -1,12 +1,11 @@
 export const data = [
   {
     id: 1,
-    name: 'Men Coat',
+    name: 'Man Coat',
     price: '$ 5000',
     stock: 5,
     description: "Elegant and warm",
-    
-    image: `https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/abrigo-hombre-mango-1510566774.jpg?crop=1.00xw:0.895xh;0,0.0124xh&resize=480:*`,
+    image:`https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/abrigo-hombre-mango-1510566774.jpg?crop=1.00xw:0.895xh;0,0.0124xh&resize=480:*`,
     categoryId: 'Men`s Clothing'
   },
   
@@ -16,7 +15,6 @@ export const data = [
     price: '$ 5000',
     stock: 4,
     description: 'Hiking footwear is trendier than ever.',
-    
     image: `https://static.dafiti.com.ar/p/lady-stork-8335-441306-1-catalog-new.jpg`,
     categoryId: 'Footwear'
   },
@@ -47,7 +45,7 @@ export const data = [
     price: '$ 6000',
     stock: 3,
     description: ' Warm and Windproof ',
-    image: 'https://i.pinimg.com/236x/ed/4b/36/ed4b369e49c84f3a491dcbddd54df7ea--hi-fashion-latex-fashion.jpg',
+    image: ` http://cdn.shopify.com/s/files/1/2501/3150/articles/fa151b85a7f32f2884a43578558083a4_6cffc9a1-d700-46d7-9a36-729967b69d4e_600x.jpg?v=1563426387`,
     categoryId: 'Women`s Clothing'
   },  
   

@@ -12,7 +12,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: white;
-    background: rgb(16, 15, 15)
+    background: rgb(10, 10, 10)
 }
 
 /*..........................NAV BAR................*/
@@ -89,146 +89,131 @@ nav ul li:hover {
     background-color: rgb(8, 8, 43);
 }
 
-/*.....................FIN NAV BAR.......................*/
+/*.....................END NAV BAR.......................*/
 
-h1 {
-    padding-top: 3rem;
+
+.addButton {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
-}
-
-p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    font-size: 30px;
-}
-
-
-.addCartContainer {
-    width: fit-content;
-    height: 30px;
-    display: flex;
-    background-color: rgb(59, 5, 193);
-    margin: auto;
-    text-align: center;
-    margin-top: 20px;
-
-}
-
-/*Adding-decreasing btn*/
-.itemCount {
-    width: fit-content;
-    height: 3rem;
-    display: flex;
-    background-color: rgb(59, 5, 193);
-    border-radius: 5px;
-
-
-
-}
-
-.addingBtn {
-
-    border-radius: 20%;
-    margin-bottom: 0.4rem;
-    width: 30px;
-    justify-content: center;
-    color: rgb(25, 24, 26);
-}
-
-.addingBtn:hover {
-    background-color: rgb(59, 5, 193);
-    color: rgb(8, 8, 8);
-}
-
-.addCart {
-    margin-left: 1rem;
-    font-weight: 500;
-    margin-bottom: 0.4rem;
-    background: white;
-    color: #141212;
-    transition: 0.4s;
-    border-radius: 0.2rem;
-}
-
-.addCart:hover {
-    background: rgb(59, 5, 193);
-    color: white;
-}
-
-h4 {
-    color: white;
-    margin-bottom: 0.1rem;
-    font-size: 1.5rem;
-}
-
-.decreaseBtn {
-    border: 2px solid rgb(11, 11, 11);
-    border-radius: 20%;
-    margin-bottom: 0.4rem;
-    width: 30px;
-    justify-content: center;
-    color: rgb(25, 24, 26);
-}
-
-.decreaseBtn:hover {
-    background-color: rgb(11, 11, 11);
-    color: white;
-}
-
-/*--------------PRODUCTS----------------*/
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
-    padding: 2rem;
-    margin-top: 2rem;
-    gap: 2rem;
-}
-
-.productCard {
-    position: relative;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(16, 15, 15);
-    border-radius: 10px;
-    margin: 1rem;
-    padding: 1rem;
-    box-shadow: 5px 5px 5px rgba(245, 238, 238, 0.954);
-}
-
-.productCard:hover {
+    height: 40px;
+    width: 100%;
     padding: 10px;
-    border: 2px solid rgb(254, 251, 251);
-    transition: 0.4s;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background-color: #1d0fe9;
+    color: white;
+    resize: none;
+    font-family: "Roboto" sans-serif;
+    text-transform: uppercase;
+    border: 1.5px solid rgb(227, 220, 220);
 }
 
-img {
-    width: 30%;
-    height: auto;
-    margin-bottom: 0.5rem;
+.addButton:hover {
+    background-color: black;
+    color: white;
+    border: 1.5px solid white;
 }
 
-.productName {
-    font-size: 2rem;
-    padding-bottom: 0.5rem;
-    margin-bottom: 0.5rem;
-
-}
-
-.productPrice {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-
-}
+/*.....................END ADD BUTTON.......................*/
 
 .productDescription {
-    font-size: 1.5rem;
-    padding-bottom: 0.5rem;
-    margin-bottom: 0.5rem;
+    color: #f8f0f0;
+    display: inline;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height: 24.75px;
+    text-align: center;
 }
+
+.productTitle {
+    color: white;
+    font-family: "Montaga";
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    line-height: 29.7px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.card {
+    box-shadow: 0 2px 2px rgba(252, 246, 246, 0.991);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.20s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 16px rgba(249, 233, 233, 0.922);
+
+}
+
+.price {
+    margin: 15px;
+    font-family: 'Roboto' sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #bababa;
+    display: flex;
+    flex-direction: column;
+}
+
+.quantity {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.quantity button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 32px;
+    width: 30px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    color: white;
+    background-color: #0800fe;
+    resize: none;
+    font-family: "Roboto" sans-serif;
+    text-transform: uppercase;
+    border: 1.5px solid rgb(243, 232, 232);
+}
+
+.quantity button:hover {
+    background-color: black;
+    color: white;
+    border: 1.5px solid white;
+}
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.quantity span {
+    color: rgb(12, 11, 11);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    width: 30px;
+    background-color: #17dfc8;
+    border: 1.5px solid black;
+
+}
+
+.loading {
+    color: #bababa;
+    font-family: Gentium Basic;
+    font-size: 20px;
+    margin: 10px;
+}
+
+/*.....................END INDIVIDUAL PRODUCT CARD.......................*/

@@ -1,22 +1,32 @@
-import React from 'react'
+import Card from 'react-bootstrap/Card';
 import ItemCount from './ItemCount'
 
 
-export default function Item(props) {
+const Item = ({ id, name, image, price, stock, description }) => {
+
+  const onAdd = (quantity) => {
+    alert("You have selected " + quantity + " items.");
+  };
+
   return (
     <>
-      <div classname="conntainer">
-        <div className='productCard'>
-          <h3 className='productName'>{props.name}</h3>
-          <img className='img' src={props.image} alt="images" />
-          <p className='productDescription'>{props.description}</p>
-          <p className='productPrice'>{props.price}</p>
-          <ItemCount stock={props.stock} min={props.min} />
-        </div>
-      </div>
+      <Card bg="black" border="dark" style={{ width: "18rem" }}>
+        <Card.Img variant="top" src={image} />
+        <Card.Body className="productBody">
+          <Card.Title className="productTitle">{name}</Card.Title>
+          <div className="price">
+            <span>{price}</span>
+          </div>
+          <ItemCount stock={stock} initial={0} onAdd={onAdd} />
+        </Card.Body>
+      </Card>
     </>
-  )
-}
+  );
+};
+
+export default Item;
+
+
 
 
 

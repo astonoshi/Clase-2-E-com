@@ -1,26 +1,27 @@
 import Item from "./Item";
 
-
-
-const ItemList = (props) => {
-
+const ItemList = ({ items = [] }) => {
   return (
     <>
-      {
-        props.items.map(item => (
+      {items.length === 0 
+      ? ( <p className="loading"> Loading... </p>) 
+      : (
+        items.map((item) => (
           <Item
             key={item.id}
             name={item.name}
+            image={item.image}
             price={item.price}
             stock={item.stock}
-            image={item.image}
             description={item.description}
-            category={item.category}
           />
         ))
-      }
+      )}
     </>
   );
-}
+};
 
 export default ItemList;
+
+
+

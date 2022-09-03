@@ -1,48 +1,40 @@
-import {useState} from "react";
-import Swal from 'sweetalert2';
-import { FaMinus, FaPlus } from "react-icons/fa";
-import React, { useEffect} from 'react';
+import { useEffect, useState } from "react";
 
-
-export default function ItemCount ({ stock = 0, initial = 0 }) {
-  const [counter, setCounter] = useState(0);
-  const addProduct = () => {
-    Swal.fire("You have added one product", "success");
-  };
+const ItemCount = ({ stock = 1, initial = 1, onAdd }) => {
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
-    setCounter(initial);
-  }, [initial]);
+    setCount(initial);
+  }, []);
 
   const increment = () => {
-    if (counter < stock) {
-      setCounter(counter + 1);
+    if (count < stock) {
+      setCount(count + 1);
     }
   };
-  const decrease = () => {
-    if (counter > initial) {
-      setCounter(counter - 1);
+
+  const decrement = () => {
+    if (count > initial) {
+      setCount(count - 1);
     }
   };
+
   return (
-    <div className="itemCount">
-    <div className="addCartContainer">
-      <button className="addingBtn" onClick={increment}>
-        <FaPlus />
-      </button>
-      < h4>{counter}</h4>
-      <button className="decreaseBtn" onClick={decrease}>
-        <FaMinus />
-      </button>
-      <button
-        onClick={counter === 0 ? null : addProduct}
-        className={`addCart ${counter === 0 ? "disabled" : ""}`}
-      >
-        Add to cart
-      </button>
+    <div>
+      <div className="quantity">
+        <button onClick={increment}> + </button>
+        <span>{count}</span>
+        <button onClick={decrement}> - </button>
+      </div>
+
+      <div className="buttonContainer">
+        <button onClick={() => onAdd(count)} className="addButton">
+          Add to Cart
+        </button>
+      </div>
     </div>
-  </div>
   );
 };
 
+export default ItemCount;
 
