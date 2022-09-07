@@ -5,28 +5,32 @@ export const data = [
     price: '$ 5000',
     stock: 5,
     description: "Elegant and warm",
-    image:`https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/abrigo-hombre-mango-1510566774.jpg?crop=1.00xw:0.895xh;0,0.0124xh&resize=480:*`,
-    categoryId: 'Men`s Clothing'
+    category: "man",
+    image:`https://i.pinimg.com/originals/b5/81/1b/b5811b692bd00dcc7562f8654af19316.jpg`,
+    categoryId: `2`,
   },
   
   {
     id: 2,
-    name: 'Women Hiking Boots',
+    name: 'Woman Hicking Footwear',
     price: '$ 5000',
     stock: 4,
-    description: 'Hiking footwear is trendier than ever.',
+    description: 'They are trendier than ever.',
+    category: "woman",
     image: `https://static.dafiti.com.ar/p/lady-stork-8335-441306-1-catalog-new.jpg`,
-    categoryId: 'Footwear'
+    categoryId: `1`,
   },
   
   {
     id: 3,
-    name: 'Men Shirt',
+    name: 'Man Causal Shirt',
     price: '$ 2000',
     stock: 6,
-    description: "A casual shirt is a perfect balance between too casual and too formal..",
-    image: 'https://i.pinimg.com/236x/35/17/8b/35178b0487a352593a781fb34643a59e.jpg',
-    categoryId: 'Men`s Clothing'
+    description: "A casual shirt is a perfect balance between too casual and too formal.",
+    category: "men",
+    image: 'https://ae01.alicdn.com/kf/H91234c703d9849c09d6d8b8cb3c4ac79B.jpg',
+    categoryId: `2`,
+    
   },
   
   {
@@ -35,67 +39,97 @@ export const data = [
     price: '$ 3500',
     stock: 4000,
     description: "Ideal for a cocktail event.",
+    category: "woman",
     image: 'https://http2.mlstatic.com/D_NQ_NP_808801-MLM49215602854_022022-W.jpg',
-    categoryId: 'Women`s Clothing'
+    categoryId: `1`,
   },
   
   {
     id: 5,
-    name: 'Leather Women`s Jacket',
+    name: 'Woman Leather Jacket',
     price: '$ 6000',
     stock: 3,
     description: ' Warm and Windproof ',
-    image: ` http://cdn.shopify.com/s/files/1/2501/3150/articles/fa151b85a7f32f2884a43578558083a4_6cffc9a1-d700-46d7-9a36-729967b69d4e_600x.jpg?v=1563426387`,
-    categoryId: 'Women`s Clothing'
+    category: "woman",
+    image: ` https://i1.adis.ws/i/misspap/mpp01444_black_xl?$product_image_category_page_very_small_mobile$`,
+    categoryId: `1`,
   },  
   
   {  
     id: 6,
-    name: 'Informal women outfit',
+    name: 'Woman Casual Outfit',
     price: '$ 2000',
     stock: 3,
-    description: "Shorts and V blouse.",
-    image: 'https://i.pinimg.com/originals/04/67/bb/0467bbffe9f443059a14613c32c7a790.jpg',
-    categoryId: 'Women`s Clothing'
+    description: "Pants and Blose",
+    categoru: "woman",
+    image: 'https://i.pinimg.com/564x/94/b5/07/94b50711e63f36156e5de95e407d83f1.jpg',
+    categoryId: `1`,
   },  
   
   {  
     id: 7,
-    name: 'Hoodie',
+    name: 'Man Casaul Outfit',
     price: '$ 1000',
     stock: 5,
-    description: "Plain hoddie.",
-    image: 'https://www.blowland.com.ar/1918-thickbox_default/adidas-originals-buzo-ccapucha-lifestyle-mono-aop-rojo.jpg',
-    categoryId: 'Men`s Clothing '
+    description: "Outfit specially designed for summer time.",
+    category: "man",
+    image: 'https://i.pinimg.com/originals/0e/9c/e6/0e9ce666f313018d7a1cf45bec1bdc9b.jpg',
+    categoryId: `2`,
   },  
   
   {  
     id: 8,
-    name: 'Thigh High Boots',
+    name: 'Ultra-sexy thigh boots',
     price: '$ 5000',
     stock: 4,
-    description: 'Ultra-sexy thigh boots',
-    image: 'https://http2.mlstatic.com/D_NQ_NP_629224-MLA45454595381_042021-W.jpg',
-    categoryId: 'Footwear'
+    description: 'Sexy and Elegant',
+    caregory:"woman",
+    image: 'https://i.pinimg.com/222x/50/62/25/506225386878f5e03a36dbe6c0840533.jpg',
+    categoryId: `1`,
   },
   
   {
     id: 9,
-    name: 'Men`s Running Shoes',
+    name: 'Leather Trainners',
     price: '$ 2000',
     stock: 5,
-    description: "Leather running shoes",
-    image: 'https://media.revistagq.com/photos/5ca5f975b73808e4ff819508/master/pass/zapatillas_basicas_para_hombre_moda_tendencias_2831.jpg',
-    categoryId: 'Footwear'
+    description: "Casual and confortable made of leather",
+    category: "man",
+    image: `https://i.pinimg.com/originals/04/48/a7/0448a7529fd4142a346f6228902889e5.jpg`,
+    categoryId: `2`,
   },
   {
   id: 10,
-  name: 'Unisex Jeans',
+  name: 'Unisex Jackets ',
   price: '$ 3000',
   stock: 6,
-  description: "Leather running shoes",
-  image: 'https://www.dhresource.com/0x0/f2/albu/g6/M00/19/99/rBVaSFuDuBGAXYlrAAFVRb94K9U437.jpg',
-  categoryId: 'Unisex Clothing'
-  },
+  description: "Designed to be wear for women and men",
+  category: "unisex",
+  image: 'https://hips.hearstapps.com/es.h-cdn.co/hares/images/media/images/gallery-1489099978-hbz-hm-01/3795691-1-esl-ES/gallery-1489099978-hbz-hm-01.jpg?resize=320:*',
+  categoryId: `3`,
+    },
+
+  {
+    id: 11,
+    name: 'Unisex Winter Outfit ',
+    price: '$ 3000',
+    stock: 6,
+    description: "A complete outfit for both ",
+    category: "unisex",
+    image: 'https://i.pinimg.com/originals/c8/e6/3e/c8e63e061440976654f42f54e9764e65.jpg',
+    categoryId: `3`,
+        },
+
+        {
+          id: 12,
+          name: 'Unisex Outfit ',
+          price: '$ 3000',
+          stock: 6,
+          description: "Jeans & Jackets",
+          category: "unisex",
+          image: `https://hips.hearstapps.com/ellees.h-cdn.co/assets/17/10/hmprod-7.jpg`,
+          categoryId: `3`,
+              },
+      
   ];
 

@@ -1,37 +1,30 @@
 import ItemCount from "./ItemCount";
-import Card from "react-bootstrap/Card";
+
+const ItemDetail = ({item}) => {
 
 
-const onAdd = (quantity) => {
-  alert("You have selected " + quantity + " items.");
-};
+    const onAdd = (cant) => {
+        alert("You have added " + cant + " " + item.name + " to the cart.");
+    }
 
-const GetItem = ({ item }) => {
-  console.log(item);
-  return (
-    <>
-      {item ? (
-        <Card bg="black" border="dark" style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={item.image} />
-          <Card.Body className="productBody">
-            <Card.Title className="productTitle">{item.name}</Card.Title>
-            <Card.Text className="productDescription">
-              {item.description}
-            </Card.Text>
-            <div className="price">
-              <span>{item.price}</span>
-              <span>stock: {item.stock}</span>
+    return (
+        <>
+            <div className="card-big">
+                <div className="content-img">
+                    <img src={item.image} className="img-card-big" alt="" />
+                </div>
+                <div className="card-desc-big">
+                    <h3>{item.name}</h3>
+                    <div className="price">
+                        <p className="secondPrice">{item.price}</p>
+                    </div>
+                    <p>{item.description}</p>
+                    <p><strong>Stock: </strong>{item.stock}</p>
+                    <ItemCount stock={item.stock} initial={0} onAdd={onAdd}/>
+                </div>
             </div>
-            <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
-          </Card.Body>
-        </Card>
-      ) : (
-        <p className="loading"> Loading... </p>
-      )}
-    </>
+        </>
 
-    
-  );
-};
-
-export default GetItem;
+    )
+}
+export default ItemDetail;

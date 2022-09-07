@@ -1,40 +1,36 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-const ItemCount = ({ stock = 1, initial = 1, onAdd }) => {
-  const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    setCount(initial);
-  }, []);
+const ItemCount = ({ stock = 0, initial = 0, onAdd}) => {
+    const [cant, setCant] = useState(0);
 
-  const increment = () => {
-    if (count < stock) {
-      setCount(count + 1);
+    useEffect(() => {
+        setCant(initial);
+    }, [ initial ]);
+
+    const subtract = () => {
+        if (cant > initial) {
+            setCant(cant-1);
+        }
     }
-  };
 
-  const decrement = () => {
-    if (count > initial) {
-      setCount(count - 1);
+    const add = () => {
+        if (cant < stock){
+            setCant(cant+1);
+        }  
     }
-  };
 
-  return (
-    <div>
-      <div className="quantity">
-        <button onClick={increment}> + </button>
-        <span>{count}</span>
-        <button onClick={decrement}> - </button>
-      </div>
-
-      <div className="buttonContainer">
-        <button onClick={() => onAdd(count)} className="addButton">
-          Add to Cart
-        </button>
-      </div>
-    </div>
-  );
-};
+    return (
+        <>
+            <div className="cont-button">
+                <button onClick={subtract} className="btn-">-</button>
+                <p className='quantity'>{cant}</p>
+                <button onClick={add} className="btnplus">+</button>
+                <button onClick={() => onAdd(cant)} className='btnAdd'>Add To Cart</button>
+            </div>
+        </>
+    );
+    
+}
 
 export default ItemCount;
-
