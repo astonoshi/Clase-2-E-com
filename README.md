@@ -1,6 +1,6 @@
 # Primer entrega "Proyecto Final"
 
-Tienda online de ropa de mujer, homre y ropa unisex
+Tienda online de ropa de mujer, hombre y ropa unisex
 
 Este proyecto fue creado con 
 React
