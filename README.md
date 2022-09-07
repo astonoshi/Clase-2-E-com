@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# Primer entrega "Proyecto Final"
+
+Tienda online de ropa de mujer, hombre y ropa unisex
+
+Este proyecto fue creado con 
+React y
+React Router Dom
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
