@@ -1,6 +1,8 @@
 import ItemCount from "./ItemCount";
+import { Link } from "react-router-dom";
 
-const ItemDetail = ({item}) => {
+
+const ItemDetail = ({ item }) => {
 
 
     const onAdd = (cant) => {
@@ -9,6 +11,8 @@ const ItemDetail = ({item}) => {
 
     return (
         <>
+        
+        
             <div className="card-big">
                 <div className="content-img">
                     <img src={item.image} className="img-card-big" alt="" />
@@ -20,7 +24,14 @@ const ItemDetail = ({item}) => {
                     </div>
                     <p>{item.description}</p>
                     <p><strong>Stock: </strong>{item.stock}</p>
-                    <ItemCount stock={item.stock} initial={0} onAdd={onAdd}/>
+                    <ItemCount stock={item.stock} initial={0} onAdd={onAdd} />
+                    {
+                        ItemCount === 0
+                            ? <ItemCount stock={item.stock} initial={ItemCount} onAdd={onAdd} />
+                            : <Link to="/cart"><button className="btnCheckOut">CheckOut</button></Link>
+                    }
+                
+
                 </div>
             </div>
         </>

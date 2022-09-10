@@ -27,6 +27,15 @@ const ItemCount = ({ stock = 0, initial = 0, onAdd}) => {
                 <p className='quantity'>{cant}</p>
                 <button onClick={add} className="btnplus">+</button>
                 <button onClick={() => onAdd(cant)} className='btnAdd'>Add To Cart</button>
+
+                {
+                    stock && cant
+                    ? <button className="btnCant" onClick={() => onAdd(cant)}>Add to Cart</button>
+                    : <button className="Disabled" disabled>Add to Cart</button>
+                    
+                }
+
+    
             </div>
         </>
     );

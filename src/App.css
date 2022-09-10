@@ -209,6 +209,23 @@ span {
 
 .secondPrice {
   font-size: x-large;
-  
-
 }
+/* checkOut Btn */
+.btnCheckOut {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 2rem;
+    background-color: #3617e3;
+    padding: 10px;
+    border-radius: 6px;
+    color: white;
+    font-size: 1rem;
+    
+  }
+  
+  .btnCheckOut:hover {
+    background-color: #f7f6fc;
+    color: rgb(25, 24, 24);
+  }
+ 
