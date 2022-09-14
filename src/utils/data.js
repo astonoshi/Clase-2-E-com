@@ -51,7 +51,7 @@ export const data = [
     stock: 3,
     description: ' Warm and Windproof ',
     category: "woman",
-    image: ` https://i1.adis.ws/i/misspap/mpp01444_black_xl?$product_image_category_page_very_small_mobile$`,
+    image: ` https://notilook.com.ar/wp-content/uploads/2019/06/campera-de-cuero-mujer-con-tachas-y-recortes-de-piel-boken-invierno-2019.jpg`,
     categoryId: `1`,
   },  
   
@@ -73,7 +73,7 @@ export const data = [
     stock: 5,
     description: "Outfit specially designed for summer time.",
     category: "man",
-    image: 'https://i.pinimg.com/originals/0e/9c/e6/0e9ce666f313018d7a1cf45bec1bdc9b.jpg',
+    image: 'https://i.pinimg.com/736x/25/bf/10/25bf10c4b5abb511160031f62cf8712d.jpg',
     categoryId: `2`,
   },  
   
@@ -84,7 +84,7 @@ export const data = [
     stock: 4,
     description: 'Sexy and Elegant',
     caregory:"woman",
-    image: 'https://i.pinimg.com/222x/50/62/25/506225386878f5e03a36dbe6c0840533.jpg',
+    image: 'https://www.nomadbubbles.com/wp-content/uploads/botas-altas-mujer-piel-marron.jpg',
     categoryId: `1`,
   },
   
@@ -95,7 +95,7 @@ export const data = [
     stock: 5,
     description: "Casual and confortable made of leather",
     category: "man",
-    image: `https://i.pinimg.com/originals/04/48/a7/0448a7529fd4142a346f6228902889e5.jpg`,
+    image: `https://www.heavenimagenes.com/heavencommerce/68ac9d04-8767-4aca-9951-49f2fea1383b/images/v2/ALPINA/19737_medium.jpg`,
     categoryId: `2`,
   },
   {

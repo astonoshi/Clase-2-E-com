@@ -1,12 +1,15 @@
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "./CartContext";
 
 
 const ItemDetail = ({ item }) => {
-
+const test = useContext(CartContext);
 
     const onAdd = (cant) => {
         alert("You have added " + cant + " " + item.name + " to the cart.");
+        test.addItem(item , cant);
     }
 
     return (
